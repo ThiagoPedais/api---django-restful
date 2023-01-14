@@ -17,7 +17,7 @@ class EvaluationSerializer(serializers.ModelSerializer):
             'email',
             'comment',
             'create',
-            'active'
+            'active',
         )
 
 
@@ -30,5 +30,5 @@ class CourseSerializer(serializers.ModelSerializer):
             'title',
             'url',
             'create',
-            'active'
+            'active',
         )
