@@ -23,7 +23,6 @@ class EvaluationSerializer(serializers.ModelSerializer):
 class CourseSerializer(serializers.ModelSerializer):
     # evaluations = EvaluationSerializer(many=True, read_only=True)
 
-
     class Meta:
         model = Course
         fields = (
