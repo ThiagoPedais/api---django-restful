@@ -3,7 +3,6 @@ from .models import Course, Evaluation
 
 
 class EvaluationSerializer(serializers.ModelSerializer):
-    ...
 
     class Meta:
         extra_kwargs = {
