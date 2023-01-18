@@ -3,7 +3,6 @@ from .models import Course, Evaluation
 
 
 class EvaluationSerializer(serializers.ModelSerializer):
-
     class Meta:
         extra_kwargs = {
             'email': {'write_only': True}
@@ -15,9 +14,15 @@ class EvaluationSerializer(serializers.ModelSerializer):
             'name',
             'email',
             'comment',
+            'evaluation',
             'create',
             'active',
         )
+
+    def validate_evaluation(self, value):
+        if value in range(1, 6):
+            return value
+        raise serializers.ValidationError("A avaliação precisa ser um número inteiro entre 1 e 5.")
 
 
 class CourseSerializer(serializers.ModelSerializer):
