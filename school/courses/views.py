@@ -6,8 +6,11 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework import mixins
 
+from rest_framework import permissions
+
 from .models import Course, Evaluation
 from .serializers import CourseSerializer, EvaluationSerializer
+from .permissions import IsSuperUser
 
 """ API V1 """
 
@@ -48,6 +51,9 @@ class EvaluationAPIView(generics.RetrieveUpdateDestroyAPIView):
 
 
 class CourseViewSet(viewsets.ModelViewSet):
+    permission_classes = (
+        IsSuperUser,
+        permissions.DjangoModelPermissions, )
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
 

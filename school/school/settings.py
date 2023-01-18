@@ -9,7 +9,8 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 
-Token: bda7b384dd8eed85e0cb1ca187968d8536723071
+Token Admin: bda7b384dd8eed85e0cb1ca187968d8536723071
+Token Damon: 8b5876b4be624a93b7320a4b65b9f786c3ecb90d
 """
 
 from pathlib import Path
